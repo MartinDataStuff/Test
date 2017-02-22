@@ -1,0 +1,22 @@
+<ul>
+  <li *ngFor="let user of users">
+
+    <md-list>
+      <md-list-item>
+        <md-card>
+          {{user.name}}
+        </md-card>
+      </md-list-item>
+    </md-list>
+</ul>
+
+<md-input-container>
+  <input mdInput
+         placeholder="Input Name"
+         [(ngModel)]="userName">
+</md-input-container>
+
+<button md-button (click)="addUser(userName)">Click me!</button>
+
+{{userName}}
+
